@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HoneySense Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('dashboard.static', filename='styles.css') }}" />
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-fzQSc4aPj8jWtgH7gO4CVkq+Y9aN4uEoT3Ck9Wb45F3M9pO3mYQm1oE8YoK7u/0n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>HoneySense</h1>
+    <p>AI-driven Honeypot: Detect • Analyze • Visualize • Alert</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h2>Attacks per Minute</h2>
+        <canvas id="attacksPerMinute"></canvas>
+      </div>
+      <div class="card">
+        <h2>Top Attacker IPs</h2>
+        <canvas id="topIps"></canvas>
+      </div>
+      <div class="card">
+        <h2>Country Distribution</h2>
+        <canvas id="countryDist"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 HoneySense · Built and published by 
+      <a href="https://arc.dev/@alivaghefi77ui?preview=1" target="_blank" rel="noopener">Ali Vaghefi</a>
+      — <a href="https://github.com/alivaghefi77-ui" target="_blank" rel="noopener">GitHub</a>
+    </small>
+  </footer>
+
+  <script src="{{ url_for('dashboard.static', filename='chart.js') }}"></script>
+</body>
+</html>

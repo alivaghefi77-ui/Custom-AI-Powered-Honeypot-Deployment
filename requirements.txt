@@ -1,0 +1,9 @@
+Flask==3.0.3
+Flask-SocketIO==5.3.6
+pandas
+numpy
+scikit-learn
+python-telegram-bot==20.8
+geoip2
+fpdf
+eventlet
